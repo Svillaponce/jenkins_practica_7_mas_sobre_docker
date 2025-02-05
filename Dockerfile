@@ -8,8 +8,8 @@ RUN apt-get -y install apt-transport-https \
                        gnupg2 \
                        lsb-release \
                        software-properties-common
-RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
-    echo "deb [arch=amd64] https://download.docker.com/linux/debian bullseye stable" > /etc/apt/sources.list.d/docker.list
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
+    echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable" > /etc/apt/sources.list.d/docker.list
 RUN apt-get update
 RUN apt-get -y install docker-ce
 
